@@ -14,8 +14,8 @@ ExternalProject_Add(
   URL_HASH "SHA1=${HASH}"
   DOWNLOAD_EXTRACT_TIMESTAMP OFF
   BUILD_IN_SOURCE OFF
-  CONFIGURE_COMMAND
-  "meson" "setup" "--prefix=${CMAKE_INSTALL_PREFIX}" "../${NAME}"
+  CONFIGURE_COMMAND "meson" "setup" "--prefix=${CMAKE_INSTALL_PREFIX}"
+                    "../${NAME}"
   BUILD_COMMAND "ninja"
   TEST_COMMAND "ninja" "test"
   INSTALL_COMMAND "ninja" "install")
