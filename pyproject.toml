@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "cmeel"
-requires = ["meson", "ninja", "cmeel[build]"]
+requires = ["cmeel[build]", "meson", "ninja"]
 
 [project]
 description = "cmeel distribution for libdrm"
