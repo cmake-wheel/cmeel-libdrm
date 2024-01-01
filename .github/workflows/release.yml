@@ -35,7 +35,7 @@ jobs:
           platforms: all
       - run: pipx install cmeel
       - run: cmeel docker -Ui "quay.io/pypa/${{ matrix.image }}_${{ matrix.arch }}"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: wh
 
@@ -54,7 +54,7 @@ jobs:
           python -m pip install build cmeel[build] meson ninja
       - name: build sdist
         run: python -m build -nso dist .
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: dist
 
